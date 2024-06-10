@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Runtime.Serialization.Formatters;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator
 {
@@ -19,7 +13,6 @@ namespace Calculator
 
                 var number1 = GetInput();
 
-
                 Console.WriteLine("Jaką operacje chcesz wykonać? Możliwe operacje to:  '+', '-', '/', '*'.");
                 var action = Console.ReadLine();
 
@@ -28,9 +21,7 @@ namespace Calculator
 
                 var result = Calculate(number1, number2, action);
 
-
                 Console.WriteLine("Wynik Twojego działania to: " + result);
-
             }
             catch (Exception ex)
             {
@@ -59,19 +50,14 @@ namespace Calculator
             {
                 case "+":
                     return number1 + number2;
-
                 case "-":
                     return number1 - number2;
-
                 case "/":
                     return number1 / number2;
-
                 case "*":
                     return number1 * number2;
-
                 default:
                     throw new Exception("Wybrałeś złą operację!");
-
             }
         }
     }
